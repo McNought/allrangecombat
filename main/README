@@ -1,0 +1,17 @@
+MODX EXTRAS
+
+Packages
+- TinyMCE
+- Wayfinder
+- BreadCrumb
+- BreadCrumbs
+- SimpleSearch
+- GoogleSiteMap
+- UltimateParent
+
+System Settings
+- site_name = 'All Range Combat'
+- friendly_urls = 'yes'
+
+.htaccess
+"Add to it"

@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>[[++site_name]] - [[*pagetitle]]</title>
+   <base href="[[++site_url]]" />
+   <link rel='stylesheet' href='resources/style/sitestyle.css'> 
+   <link rel='stylesheet' href='assets/Metro-UI-CSS-master/css/modern.css'>
+   <link rel='stylesheet' href='assets/Metro-UI-CSS-master/css/modern-responsive.css'>
+</head>
+<body>
+<div class='outerWrapper'> 
+  <div class='menubar'>
+    <img alt='(menu bar)' src='resources/images/slices/MenuBar.gif' width='684' height='45' usemap='#Map' border='0'>
+    <map name='Map'>
+       <area shape='rect' coords='13,7,130,31'  href='[[~2]]'>
+       <area shape='rect' coords='140,7,229,32' href='[[~3]]'>
+       <area shape='rect' coords='241,7,356,31' href='[[~4]]'>
+       <area shape='rect' coords='368,7,445,32' href='[[~5]]'>
+       <area shape='rect' coords='455,8,533,32' href='[[~6]]'>
+       <area shape='rect' coords='543,8,662,31' href='[[~7]]'>
+    </map>
+  </div>
+  <div class='header'> 
+    <div class='header'><img alt='(banner)' src='resources/images/slices/mainTitleBar.gif' width='684' height='172' usemap='#Map2' border='0'><map name='Map2'><area shape='rect' coords='3,-1,313,170' href='[[~1]]' alt='Home' title='Home'><area shape='rect' coords='312,67,386,134' href='styles/tae-kwon-do.htm'><area shape='rect' coords='385,67,431,133' href='styles/jiu-jitsu.htm'><area shape='rect' coords='431,67,464,132' href='styles/kali.htm'><area shape='rect' coords='465,68,524,131' href='styles/muay-thai.htm'><area shape='rect' coords='523,70,607,131' href='styles/Jun-fan-kung-fo.htm'><area shape='rect' coords='606,69,658,129' href='styles/boxing.htm'><area shape='rect' coords='386,134,627,158' href='default.asp'></map></div>
+  </div>
+
+<h2>PAGE:[[*pagetitle*]]</h2>
+<pre>
+Sitename : [[++site_name]]
+
+longtitle: [[*longtitle*]]
+
+pagetitle: [[*pagetitle]]
+
+Page ID: [[*id]]
+
+make a link : [[~2]] 
+
+alias : [[*alias]]
+
+
+menutitle: [[*menutitle]]
+
+
+<h1>[[*longtitle]]</h1>
+ 
+Page ID: [[*id]]<br/>
+IntroText (Summary): [[*introtext]]<br/>
+MenuTitle: [[*menutitle]]
+
+q = [[!myTest?startId=`0`!]]
+
+</pre>
+
+<div id="navigation">
+NAV
+<hr>
+[[!Wayfinder?startId=`0`!]]
+<hr>
+[[!Wayfinder?startId=`0` &hereClass=`current` &level=`1` &outerClass=mainnav !]]
+<hr>
+[[!Wayfinder? &startId=`0` &level=`2`!]]
+<hr>
+[[!Wayfinder? &startId=`[[UltimateParent?]]` &level=`1` &hideSubMenus=`1` &hereClass=`current` &outerClass=`submenu` !]]
+<hr>
+[[!Wayfinder? &startId=`[[UltimateParent?  &topLevel=`2`]]` &hideSubMenus=`1` &hereClass=`current` &outerClass=`submenu2` !]]
+<hr>
+[[UltimateParent? &topLevel=`2`]]
+<hr>
+NAV-END
+		</div><!-- end of navigation -->
+
+  <div class='contentWrapper'> 
+    <!-- START RIGHT COL --> 
+    <?php include 'mainincludes/rightColContent.htm'; ?>
+    <!-- END RIGHT COL --> 
+    <div class='content'> 
+	<a href='#top'></a> 
+      <div class='summary'></div>
+      <div class='copy'> 
+
+[[*content]]
+
+      </div>
+      <a class='topLink' href='#top'>Back to top</a> </div>
+  </div>
+  <div class='footbar'><a class='externallink' href='http://www.amauk.co.uk/' target='_blank'><img src='resources/images/slices/AmaBanner.gif' width='210' height='56' alt='(AMA Logo)' border='0'></a></div>
+</div>
+</body>
+</html>

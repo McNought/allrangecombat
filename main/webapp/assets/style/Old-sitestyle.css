@@ -1,0 +1,225 @@
+body
+{
+    BACKGROUND-IMAGE: url(../images/slices/MainBackground.gif);
+    MARGIN: 0px;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: black;
+    TEXT-ALIGN: center ;
+}
+div.outerWrapper
+{
+    BACKGROUND-IMAGE: url(../images/slices/contentBackground_slice.gif);
+    margin-right:0px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:25px;
+    WIDTH: 684px;
+    BACKGROUND-REPEAT: repeat-y;
+    POSITION: relative;
+    TEXT-ALIGN: left
+}
+div.outerWrapper div.header
+{
+    WIDTH: 684px;
+    HEIGHT: 172px;
+    BACKGROUND-COLOR: royalblue
+}
+div.outerWrapper div.menubar
+{
+    WIDTH: 684px;
+    HEIGHT: 45px;
+    BACKGROUND-COLOR: black
+}
+div.outerWrapper div.contentWrapper
+{
+    PADDING-RIGHT: 10px;
+    PADDING-LEFT: 10px;
+    MIN-HEIGHT: 559px;
+    BACKGROUND-IMAGE: url(../images/slices/contentBackGround.gif);
+    PADDING-BOTTOM: 10px;
+
+    BACKGROUND-REPEAT: no-repeat
+}
+div.outerWrapper div.contentWrapper div.menu,
+div.outerWrapper div.contentWrapper div.callout
+{
+    FONT-SIZE: 75%;
+    FLOAT: right;
+    WIDTH: 331px;
+
+    BACKGROUND-IMAGE: url(../images/slices/calloutBackground_Bottom.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    background-position: bottom left ; 
+
+    padding-bottom:10px;
+    margin-left:10px;
+    margin-bottom:10px;
+    
+	
+
+}
+
+div.outerWrapper div.contentWrapper div.menu a
+	{
+	font-size:140%;
+	}
+div.outerWrapper div.contentWrapper div.menu div.ChildPages a
+	{
+	font-size:100%;
+	}
+	
+div.outerWrapper div.contentWrapper div.rightcol
+{
+float:right;
+}
+div.outerWrapper div.contentWrapper div.rightcol div.menu,
+div.outerWrapper div.contentWrapper div.rightcol div.callout
+{
+float:none;
+}
+
+div.outerWrapper div.contentWrapper div.menuInner,
+div.outerWrapper div.contentWrapper div.calloutInner
+{
+    BACKGROUND-IMAGE: url(../images/slices/calloutBackground_Top.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    background-position: top left ; 
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:15px;
+	padding-bottom:0px;
+} 
+
+div.outerWrapper div.contentWrapper div.calloutInner p
+{
+	margin-top:0px;
+	margin-bottom:3px;
+}
+
+
+div.outerWrapper div.contentWrapper div.menu UL
+{
+    MARGIN-TOP: 3px;
+    PADDING-LEFT: 0px;
+    MARGIN-RIGHT: 5px;
+    LIST-STYLE-TYPE: none
+}
+div.outerWrapper div.contentWrapper div.menu UL LI
+{
+    MARGIN-BOTTOM: 5px
+}
+
+div.outerWrapper div.contentWrapper div.menu UL LI UL
+{
+margin-left:20px;
+}
+
+div.outerWrapper div.contentWrapper div.menu UL LI SPAN.Summary
+{
+    DISPLAY: block;
+    FONT-SIZE: 80%
+}
+foo div.outerWrapper div.contentWrapper div.content
+{
+    FONT-SIZE: 75%;
+    MARGIN-LEFT: 200px
+}
+foo div.outerWrapper div.contentWrapper div.content H1
+{
+    FONT-SIZE: 150%;
+    MARGIN: 0px
+}
+div.outerWrapper div.footbar
+{
+    CLEAR: both;
+    WIDTH: 100%;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 56px
+}
+div.outerWrapper div.footbar a.externallink
+{
+	float:right;
+}
+div.copy
+{
+font-size:80%;
+}
+div.outerWrapper div.contentWrapper h1
+{
+font-size:1.5em;
+color:#FCE29E;
+}
+
+div.outerWrapper div.contentWrapper h2
+{
+font-size:1.2em;
+color:#FCE29E;
+}
+
+div.copy img
+{
+margin:10px;
+float:left;
+}
+
+foo div.copy HR
+{
+    COLOR: gold;
+    BORDER-BOTTOM: gold 1px solid;
+    HEIGHT: 1px
+}
+foo div.copy TABLE TD
+{
+    FONT-SIZE: 80%
+}
+A
+{
+    COLOR: gold;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-DECORATION: none
+}
+A:link
+{
+    FONT-WEIGHT: bolder;
+    COLOR: gold;
+    FONT-FAMILY: Verdana, Arial
+}
+A:visited
+{
+    COLOR: orange;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-DECORATION: underline
+}
+TABLE.imgFrame
+{
+    BORDER-RIGHT: gold thin solid;
+    PADDING-RIGHT: 1px;
+    BORDER-TOP: gold thin solid;
+    PADDING-LEFT: 1px;
+    FLOAT: left;
+    PADDING-BOTTOM: 1px;
+    MARGIN: 5px;
+    BORDER-LEFT: gold thin solid;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: gold thin solid
+}
+TD.imgFrame
+{
+    FONT-SIZE: 7pt;
+    COLOR: blue;
+    BACKGROUND-COLOR: gold
+}
+
+span.clickhere
+{
+text-align:right;
+display:block;
+font-size:80%;
+margin:3px;
+}

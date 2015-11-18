@@ -1,0 +1,97 @@
+.metrouicss .full-bar
+{
+	background-color: silver;
+}
+
+.metrouicss .nav-bar .nav-bar-inner > ul.menu > li.active a 
+{
+	font-weight: bold;
+}
+
+.metrouicss ul.B_crumbBox {
+    list-style: none outside none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.metrouicss ul.B_crumbBox li 
+{
+	display: inline;
+}
+
+.metrouicss ul a,
+.metrouicss ul.B_crumbBox a, .metrouicss ul.B_crumbBox .link
+{
+	color: white;
+	
+}
+
+
+.metrouicss #page2 ul.menu {
+    list-style-position:outside;
+    list-style-type: square;
+}
+
+.metrouicss #page2 ol.menu {
+    list-style-position:outside;
+}
+
+#page2 a,
+#page2 h1,
+#page2 h4,
+.metrouicss #page3 ul.menu > li > *
+{
+	color: #ffc40d ;
+}
+
+
+#page2 h2
+{
+	font-size: 1.75em; 
+	line-height: 1.75em;
+	color: white ;
+}
+
+#page2 h3
+{
+	font-size: 1.5em; 
+	line-height: 1.5em;
+	color: white ;
+}
+
+.bg-color-blueDark {
+  background-color: #2b5797 !important;
+  BACKGROUND-IMAGE: url(../images/slices/ARCS-Site_22.gif);
+}
+
+.metrouicss #page3 ul.menu ,
+.metrouicss #page3 ul.menu ul
+{
+	
+	list-style-position:outside;
+    list-style-type:none;
+}
+.metrouicss #page3 ul.menu > li
+{
+    display: block;
+    float: left;
+    padding-right:1em;
+}
+
+
+.metrouicss #page3 ul.menu ul > li > *
+{
+	font-weight:normal;
+    font-size: smaller;
+}    
+
+.metrouicss .nav-bar .nav-bar-inner > ul.menu
+{
+	margin-top:2px;
+}
+
+.metrouicss .sisea-search-form fieldset
+{
+	border: 0px;
+	margin-top: 0px;
+}
