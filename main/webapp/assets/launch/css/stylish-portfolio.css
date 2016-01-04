@@ -4,6 +4,43 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/* Colours */
+.bg-Black
+{
+ background-color:black;
+}
+
+.bg-Silver
+{
+ background-color:silver;
+}
+
+.fg-dkRed,
+.bg-dkRed .panel
+{
+ color:#9A1A32;
+}
+.bg-dkRed .panel
+{
+ background-color:white;
+}
+.bg-dkRed,
+.bg-dkRed a,
+.bg-dkRed .panel .fa.second
+{
+ color: white;
+}
+.bg-dkRed .panel .fa,
+.bg-dkRed .panel a
+{
+	color:#9A1A32;
+}
+.bg-dkRed
+{
+ background-color:#9A1A32;
+}
+
+
 /* Global Styles */
 
 html,
@@ -160,7 +197,7 @@ hr.small {
     background-size: cover;
     -o-background-size: cover;
 }
-.header::after {
+.Xheader::after {
   content: "";
     background: url(../img/martial_arts-960x340_blank.jpg) no-repeat center center scroll;
   opacity: 0.25;
@@ -168,6 +205,8 @@ hr.small {
   left: 0;
   bottom: 0;
   right: 0;
+      width: 100%;
+    height: 100%;
   position: absolute;
   z-index: -1;  
       -webkit-background-size: cover;
@@ -178,21 +217,35 @@ hr.small {
 
 .header img.logo
 {
-	width:75%;
+	width:50%;
 }
+
+/* Section */
+Xsection {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 /* About */
 
 .about {
     padding: 50px 0;
+
 }
 
-/* Services */
+/* classes */
 
-.services {
+.classes {
     padding: 50px 0;
-}
 
-.service-item {
+}
+.classes .panel
+{
+	height: 25em;
+}
+.class-item,.service-item {
     margin-bottom: 30px;
 }
 
@@ -241,7 +294,9 @@ hr.small {
 /* Map */
 
 .map {
-    height: 500px;
+    padding: 50px 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media(max-width:768px) {
@@ -250,8 +305,15 @@ hr.small {
     }
 }
 
+.contact {
+    padding: 50px 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Footer */
 
 footer {
     padding: 100px 0;
+
 }
