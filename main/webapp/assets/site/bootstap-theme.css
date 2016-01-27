@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron");
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic");
 
+body {
+    padding-top: 0px; /* reset in bootswatch custom.min */
+}
 .watermark {
     position: fixed;
     opacity: 0.25;
-    font-size: 6vw;
+    Xfont-size: 6vw;
+    font-size: 30pt;
     
 	z-index: 6000;
     text-align: center;
@@ -14,19 +18,20 @@
     margin-left:auto;
     margin-right:auto;
     
-    transform: rotate(-45deg)
+    transform: rotate(-45deg);
+    display:none;
 }
 
 /* Intro max height */
 .panel.panel-max32
 {
 	border:1px solid red;
-	min-height: 32vh;
+	Xmin-height: 32vh;
 }
 .panel.panel-max44
 {
 	border:1px solid red;
-	min-height: 44vh;
+	Xmin-height: 44vh;
 }
 
 .panel .fa.second
@@ -34,10 +39,6 @@
  color: white;
 }
 
-.navbar
-{
-	
-}
 
 /* Colours */
 .bg-Black
@@ -70,33 +71,36 @@
 }
 
 .bg-dkRed,
-.navbar
+body>.navbar
 {
  background-color:#9A1A32;
 
 }
 
-.navbar
+body>.navbar
 {
- height: 10vw;
+	min-height: 70px;
+ 	Xheight: 10vw;
+ 	
 }
 
 #topfix.container
 {
-	margin-top:8vw;
-	border:1px solid lime;
+	margin-top:70px; /* Same as navbar */
+	XXmargin-top:8vw;
+	XXborder:1px solid lime;
 	XXmin-height:100%;
 }
 
 #intro
 {
-	margin-top:0vw;
+	XXmargin-top:0vw;
 }
 
 .full-page
 {
-		min-height: 80vh;
-		border:1px solid orange;
+		XXmin-height: 80vh;
+		XXborder:1px solid orange;
 		Xmargin-top:28vw;
 }
 
@@ -109,19 +113,20 @@
 }
 .navbar-logo img
 {
-	width: 28vw;
+	Xwidth: 28vw;
+	width: 20%;
 	float:left;
 }
 .navbar-logo div
 {
-	font-size: 3.0vw;
+	Xfont-size: 3.0vw;
 	padding-top: 8.5px;
 	float:left;
 }
 .container > .navbar-header
 {
 	
-	margin-left: 15vw;
+	Xmargin-left: 15vw;
 }
 
 .navbar-brand
@@ -146,7 +151,7 @@ background-size:     cover;
 
 @media screen and (max-width: 568px) {
 body {
-    color:lime;
+    XXcolor:lime;
     font-size: 20px
     }
 }
@@ -159,16 +164,16 @@ body {
     /* styles for browsers larger than 960px; */
     
 body {
-    color: purple;
-    font-size: 2.0vw
+    XXcolor: purple;
+    Xfont-size: 2.0vw
     }
 }
 @media only screen and (min-width:1440px){
     /* styles for browsers larger than 1440px; */
     
 body {
-    color: red;
-    font-size: 1.0vw;
+    XXcolor: red;
+    Xfont-size: 1.0vw;
     }
 .container {
     width: 80%;
@@ -179,7 +184,7 @@ body {
     /* for sumo sized (mac) screens */
 body {
     color: fuchsia;
-    font-size: 1.4vw;
+    Xfont-size: 1.4vw;
     }
 .container {
     width: 80%;
@@ -188,7 +193,7 @@ body {
 @media only screen and (max-device-width:480px){
    /* styles for mobile browsers smaller than 480px; (iPhone) */
    body {
-    color:lime;
+    XXcolor:lime;
     font-size: 20px
     }
    
@@ -196,7 +201,7 @@ body {
 @media only screen and (device-width:768px){
    /* default iPad screens */
    body {
-    color: blue;
+    XXcolor: blue;
     font-size: 20px
     }
 }
@@ -204,8 +209,8 @@ body {
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
   /* For portrait layouts only */
   body {
-    color: green;
-    font-size: 2.4vw;
+    XXcolor: green;
+    Xfont-size: 2.4vw;
     }
 }
 
@@ -213,8 +218,8 @@ body {
   /* For landscape layouts only */
   
   body {
-    color: sandybrown;
-    font-size: 1.5vw;
+    XXcolor: sandybrown;
+    Xfont-size: 1.5vw;
     }
 .container {
     width: 100%;
