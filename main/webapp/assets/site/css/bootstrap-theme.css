@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
+
+div.anchor
+{
+	width:100%;
+	height:1px;
+	Xbackgroud-color:lime;
+}
+a.scroller
+{
+	Xcolor:lime;
+}
+
+body {
+  padding-top: 50px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
+{
+	font-weight: bolder;
+}
+.navbar
+{
+	height:100px;
+}
+
+.navbar.smaller
+{
+	height:20px;
+}
+
+.navbar-collapse,
+.navbar-default
+{
+	border:none;
+}
+
+
+.navbar>.container .navbar-brand
+{
+	margin-left:30%;
+}
+
+.navbar-brand img
+{
+	position: fixed;
+	z-index: 1050;
+	left:0;
+	width: 45%;
+	height: auto; 
+	padding-top: 0px;
+	margin-top: -20px;
+}
+
+
+.strap
+{
+	font-family: Orbitron;
+	font-weight: bold;
+}
+.navbar-brand span.strap
+{
+	font-size:20pt;
+	position: fixed;
+	z-index: 1050;
+	left:45%;
+    top:65px;
+}
+
+@media (max-width: 768px) {
+.navbar-brand span.strap
+	{
+	font-size:16pt;
+	}
+}
+@media (max-width: 540px) {
+.navbar-brand span.strap
+	{
+	font-size:10pt;
+	Xcolor:lime;
+	
+	}
+}
+@media (max-width: 340px) {
+.navbar-brand span.strap
+	{
+	Xcolor:orange;
+	top:50px;
+	}
+}
+.navbar .navbar-toggle
+{
+z-index: 1100;	
+}
+
+.navbar.smaller span.strap
+{
+	left:25%;
+	top:13px;
+	font-size:10pt;
+}
+
+
+.hero
+{
+	background: white url(../img/martial_arts-960x340_blank.jpg) ;
+	background-size: auto 100% ;
+	background-repeat: no-repeat;
+    background-position: center; 
+}
+@media (max-width: 768px) {
+	.hero
+	{
+	background: white  ;
+	}
+}
+.well,
+.hero .jumbotron
+{
+    background-color: rgba(48,48,48,  0.5);
+}
+.hero .jumbotron .panel
+{
+	opacity: 1;
+}
+.container
+{
+	Xborder:1px solid orange;
+}
+
+.container.full-page
+{
+	border:none;
+	Xborder-bottom:1px solid silver;
+	min-height:55em;
+	Xmargin-top:50px;
+}
+
+.container.full-page.banner-page
+{
+	padding-top:10em;
+	padding-bottom:0em;
+}
+
+.panel-max30
+{
+	min-height: 30em;
+}
+
+
+.panel-foot
+{
+    padding: 10px 15px;
+}
+
+.panel-max22
+{
+	padding-top: 0px;
+	min-height: 22em;
+}
+
+
+.panel-max22 .panel-heading
+{
+	padding-top: 1px;
+	min-height: 10em;
+}
+
+.panel-max22 .panel-body
+{
+	min-height: 11em;
+}
+
+
+
+/* Colours */
+.bg-dark,
+body
+{
+ background-color: #222222;
+ color:white;
+}
+.panel,
+.panel .fa.second
+{
+ color: white;
+}
+.panel
+{
+	background-color: #303030;
+	border-width:2px;
+	border-color:#464545;
+	border-radius: 8px;
+}
+.panel .panel-heading
+{
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	background-color: #464545;
+	color: white;
+}
+.fg-Silver
+{
+ color:silver;
+}
+
+.bg-Silver
+{
+ background-color:silver;
+}
+
+.fg-white,
+.navbar,
+.navbar-default .navbar-brand,
+.navbar-default a.navbar-brand:hover,
+.navbar-logo,
+.navbar-logo a,
+.navbar-logo a:hover,
+.navbar-default .navbar-nav>li>a
+{
+ color:white;
+}
+
+
+.fg-dkRed,
+a
+{
+ color:#9A1A32;
+ 
+}
+
+.bg-dkRed,
+body>.navbar,
+.navbar a
+{
+ background-color:#9A1A32;
+ color:white;
+}
+
+
+
+
+
+
+
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
