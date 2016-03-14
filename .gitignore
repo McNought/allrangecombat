@@ -8,3 +8,4 @@ main/webapp/assets/components/
 *.db
 main/webapp/connectors/
 passwords.txt
+rootkey.csv
