@@ -104,7 +104,7 @@ z-index: 1100;
 }
 
 
-.hero
+.banner
 {
 	background: white url(../img/martial_arts-960x340_blank.jpg) ;
 	background-size: auto 100% ;
@@ -162,6 +162,10 @@ z-index: 1100;
 	min-height: 22em;
 }
 
+.panel-heading.lead
+{
+	margin-bottom:0px;
+}
 
 .panel-max22 .panel-heading
 {
@@ -182,6 +186,10 @@ body
 {
  background-color: #222222;
  color:white;
+}
+.fg-dark
+{
+ color: #222222;
 }
 .panel,
 .panel .fa.second
@@ -241,13 +249,12 @@ body>.navbar,
 }
 
 
-
-
-
-
-
-
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}
+
+.well.bg-white
+{
+background-color: rgba(255,255,255, 0.75);
 }
