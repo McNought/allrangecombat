@@ -1,0 +1,16 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    th:replace="theme.thyme::html">
+    <head>
+    <title th:text='${content.title}'>head-title</title>
+    </head>
+	<body>
+	
+            <div th:utext='${content.body}'>body</div>
+            <hr/>
+            <h4 th:text='${content.title}'>h2-title</h4>
+            <p><em th:text='${#dates.format(content.date,"dd MMMM yyyy")}'>date</em></p>
+            
+    </body>
+</html>

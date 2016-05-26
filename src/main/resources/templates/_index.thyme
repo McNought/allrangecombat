@@ -1,0 +1,73 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org" th:replace="theme.thyme::html">
+<head>
+<title>Introduction</title>
+<style type="text/css">
+body{
+color:white;
+background:black;
+}
+</style>
+</head>
+<body>
+	<h2>Introduction</h2>
+    <p>
+        Essentially all that this does is to allow a developer to gather
+        all the tools for a development environment and install them onto
+        a Windows machine in a simple and quick manner.<br/>
+        For a technical lead it allows a way to control the development set for
+        their developers and to know that it was initially installed from
+        a standard pattern. A pattern that can be version controlled.<br/>
+        The concept is similar to the idea of a <a
+            href="http://martinfowler.com/bliki/PhoenixServer.html">Pheonix
+            Server</a>, which is a server that can be destroyed and recreated
+        reliably and at will. &nbsp;This contrasts with the usual <a
+            href="http://martinfowler.com/bliki/SnowflakeServer.html">Snowflake
+            Server</a> which is where each set up is unique and can not be
+        reproduced.
+    </p>
+	<p>The intention is to make it possible to install the entire development environment
+		software and set up the environment from a single command.<br/>
+    This should allow developers &amp; Tech-leads to ensure all their developers are using the same
+    versions of tools and to control the set up from a their GIT repository location.  </p>
+    <h2>How?</h2>
+    <p>The technology that drives <b>OBSIDIAN</b> is based on Powershell scripts and their ability to load them from a central webserver.</p>
+    <p>It is possible to send a script to PowerShell from a webserver and use that script to run commands on the PC.<br/>This is what <b>OBSIDIAN</b> does.</p>
+    
+    <h2>What does the installer script do?</h2>
+    <p>Each of the installation types all have a url associated with them that simply needs to be posted into a 
+    windows command window. This will download the Powershell script for execution.</p>
+    <p>The download follows these steps:</p>
+    <ol>
+        <li>Ask for clean installation confirmation, which if selected will DELETE all the installed tools before continuing.
+            It is possible if only one tool needs updating to simply delete its folder.
+        </li>
+        <li>All the required modules are downloaded as ZIP files and exploded into the correct install folder;</li>
+        <li>Selected installation packages are executed if newly downloaded;</li>
+        <li>Shortcuts are added to the developer's desktop.</li>
+    </ol>
+
+    <h2>But why &nbsp;<b>OBSIDIAN WEAPON</b>?</h2>
+    <p>Simply because the original Powershell scripts came form a project that had a code name. So a new code name was needed to replace all the instances in the script. So a website called <a href="#">http://projectcodename.com/</a>&nbsp;was used to geneate a "cool name".</p>    
+    
+    
+    
+    
+	<h2>Blog-TBC</h2>
+
+	<div th:each="post : ${published_posts}">
+		<a th:href='${post.uri}' href='href'><h3 th:text='${post.title}'>title</h3></a>
+		<p th:text='${#dates.format(post.date,"dd MMMM yyyy")}'>date</p>
+		<p th:utext='${post.body}'>body</p>
+	</div>
+
+	<hr />
+
+	<p>
+		Older posts are available in the <a
+			th:href='${content.rootpath+config.archive_file}' href='href'>archive</a>.
+	</p>
+</body>
+</html>

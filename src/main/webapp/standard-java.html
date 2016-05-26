@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Project: OBSIDIAN WEAPON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="assets/css/mod.css" media="screen">
+    <link rel="stylesheet" href="https://bootswatch.com/assets/css/custom.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">Project: <b>OBSIDIAN WEAPON</b></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Content <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="../default/">Default</a></li>
+                <li class="divider"></li>
+                <li><a href="../cerulean/">Cerulean</a></li>
+                <li><a href="../cosmo/">Cosmo</a></li>
+                <li><a href="../cyborg/">Cyborg</a></li>
+
+                <li><a href="../yeti/">Yeti</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="../help/">Help</a>
+            </li>
+            <li>
+              <a href="http://news.bootswatch.com">Blog</a>
+            </li>
+
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Project: <b>OBSIDIAN WEAPON</b></h1>          
+            <h2>A Downloadable Development Environment for IPL</h2>
+            <p class="lead">An easy way to set up developement environments for projects.<br>Easy and modern (sets up tools for a VM).</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 col-md-2">
+            <div class="list-group table-of-contents">
+              <a class="list-group-item" href="#navbar">Navbar</a>
+              <a class="list-group-item" href="#buttons">Buttons</a>
+              <a class="list-group-item" href="#typography">Typography</a>
+              <a class="list-group-item" href="#tables">Tables</a>
+              <a class="list-group-item" href="#forms">Forms</a>
+              <a class="list-group-item" href="#navs">Navs</a>
+              <a class="list-group-item" href="#indicators">Indicators</a>
+              <a class="list-group-item" href="#progress-bars">Progress bars</a>
+              <a class="list-group-item" href="#containers">Containers</a>
+              <a class="list-group-item" href="#dialogs">Dialogs</a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-8">
+            <div>
+                <script type="text/javascript">
+                var loc = location.pathname ;
+                var serverURI = location.host + loc.substring(0,loc.lastIndexOf('/')) ;
+                </script>
+                 			  
+			  <h2>Using the installer script</h2>
+			  <p>It is possible to install the entire developement environment software and set up the environment from a single command.</p>
+              <p>Simply paste the following into a command prompt: </p>
+              <div class="well bs-component">
+                <code>@powershell -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadString('http://<script type="text/javascript">document.write(serverURI)</script>/scripts/server/install.ps1')) | iex"</code>
+              </div>  
+              <p>Or from within powershell:</p>
+              <div class="well bs-component">
+<code>((new-object net.webclient).DownloadString('http://<script type="text/javascript">document.write(serverURI)</script>/scripts/server/install.ps1')) | iex</code>
+                </div>
+<h3>Options</h3>
+<p>Options for configuring the install script are stored in environment variables.</p>
+<ul>
+<li><b>DDSDomain</b><br>Override the DDS domain derived from the last 2 digits of the machines IP address. Useful for developer machines where ip addresses should come from [the wiki](http://mirage/wiki/doku.php?id=i1284007:unique_inspire.dds.domain_values) or when using two machines together.</li>
+<li><b>IMPADDomain</b><br>Override the default IMP Active Directory Domain used to authenticate users, default INSPIRE.local.</li>
+<li><b>IMPADURL</b><br>YY</li>
+<li><b>IMPTraining</b><br>YY</li>
+<li><b>DDSDomain</b><br>YY</li>
+<li><b>DDSDomain</b><br>YY</li>
+</ul>
+
+<h3>Scripts</h3>
+<p>When installed you will end up with all the software installed into <code>`C:\INSPIRE`</code>.</p>
+<p>In this folder you will find the following scripts to start or stop various elements of the system:</p>
+<ol>
+<li><b>start-simulator.bat</b><br>starts the simulator.</li>
+</ol>
+
+<h3>Folders</h3>
+<p>When installed all software will be in <code>`C:\Inspire`</code>.</p>
+<p>The structure will be as follows:</p>
+<ol>
+<li><code>C:\Inspire</code><br>All scripts</li>
+<li><code>C:\Inspire\7zip</code><br>All scripts</li>
+<li><code>C:\Inspire\java</code><br>The current installed version of JAVA</li>
+<li><code>C:\Inspire\mysql</code><br>All scripts</li>
+<li><code>C:\Inspire\flyway</code><br>Flyway database creation utility used during installation.</li>
+<li><code>C:\Inspire\tomcat</code><br>The currently installed version of Tomcat. Not initially running (will have IMP in WEBAPPS).</li>
+</ol>
+
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-2">
+            <div class="bs-component">
+             <h2>Example body text</h2>
+              <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+              <p><small>This line of text is meant to be treated as fine print.</small></p>
+              <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+              <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+              <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+              <h2>Emphasis classes</h2>
+              <p class="text-muted">text-muted: Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+              <p class="text-primary">text-primary: Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p class="text-warning">text-warning: Etiam porta sem malesuada magna mollis euismod.</p>
+              <p class="text-danger">text-danger: Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p class="text-success">text-success: Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+              <p class="text-info">text-info: Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            </div>
+
+          </div>
+        </div>
+		
+      </div>
+
+        <!-- Works with Show Source -->
+      <div id="source-modal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Source Code</h4>
+            </div>
+            <div class="modal-body" style="min-height:15em;">
+              <textarea style="width:100%;height:10em"></textarea>
+              <div class="text-muted">Ctrl-A/Copy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+
+            <ul class="list-unstyled">
+              <li class="pull-right"><a href="#top">Back to top</a></li>
+              <li><a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
+              <li><a href="http://feeds.feedburner.com/bootswatch">RSS</a></li>
+              <li><a href="https://twitter.com/bootswatch">Twitter</a></li>
+              <li><a href="https://github.com/thomaspark/bootswatch/">GitHub</a></li>
+	            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+	            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+              <li><a href="../help/#api">API</a></li>
+              <li><a href="../help/#support">Support</a></li>
+            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+            </ul>
+
+		  <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
+            <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+
+          </div>
+        </div>
+
+      </footer>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom-scroller.js"></script>
+    <script src="assets/js/custom-copysource.js"></script> 
+</body>
+</html>

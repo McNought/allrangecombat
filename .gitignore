@@ -9,3 +9,13 @@ main/webapp/assets/components/
 main/webapp/connectors/
 passwords.txt
 rootkey.csv
+_Obsidian/
+_images/
+_launch/
+_launchwebsite/
+_webapp/
+src/main/resources/assets/_index.html
+target/
+_jQuery-1.11.1/
+_bootswatch/
+php-webapp.zip

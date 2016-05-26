@@ -1,0 +1,162 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>Arcs</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>i9700013-snapshots</id>
+			<url>http://buzzcut.iplbath.com:8081/nexus/content/repositories/snapshot-i9700013/</url>
+		</snapshotRepository>
+		<repository>
+			<id>i9700013-releases</id>
+			<url>http://buzzcut.iplbath.com:8081/nexus/content/repositories/releases-i9700013/</url>
+		</repository>
+	</distributionManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- assamble static content -->
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>src/main/assembly/static.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+            <!-- See http://www.jbake.org/docs/2.4.0/#maven_plugin -->
+            <!--  generate-sources -->
+			<plugin>
+			    <groupId>br.com.ingenieux</groupId>
+			    <artifactId>jbake-maven-plugin</artifactId>
+			    <version>0.0.9</version>
+			    <executions>
+			        <execution>
+			            <id>default-generate</id>
+			            <phase>generate-resources</phase>
+			            <goals>
+			                <goal>generate</goal>
+			            </goals>
+			        </execution>
+			    </executions>
+			    <configuration>
+			        <inputDirectory>${project.basedir}/src/main/resources</inputDirectory>
+			        <outputDirectory>${project.build.directory}/site-res</outputDirectory>
+			        <excludes>
+                        <exclude>**/*.ps1</exclude>
+<!-- 			            <exclude>**/how-it-works.html</exclude> -->
+			        </excludes>
+			    </configuration>
+			    <dependencies>
+			        <!-- for thymeleaf rendering -->
+			        <dependency>
+					      <groupId>org.thymeleaf</groupId>
+					      <artifactId>thymeleaf</artifactId>
+					      <version>2.1.4.RELEASE</version>
+			        </dependency>
+			        <!-- for Markdown formatted support -->
+			        <dependency>
+					  <groupId>org.pegdown</groupId>
+					  <artifactId>pegdown</artifactId>
+					  <version>1.4.2</version>
+					</dependency>
+					<!-- For AsciiDoc content support -->
+					<dependency>
+					    <groupId>org.asciidoctor</groupId>
+					    <artifactId>asciidoctorj</artifactId>
+					    <version>1.5.2</version>
+					</dependency>
+					<!-- For Freemarker template support -->
+					<dependency>
+					    <groupId>org.freemarker</groupId>
+					    <artifactId>freemarker</artifactId>
+					    <version>2.3.20</version>
+					</dependency>
+					<!-- For Groovy template support -->
+					<dependency>
+					    <groupId>org.codehaus.groovy</groupId>
+					    <artifactId>groovy</artifactId>
+					    <version>2.3.6</version>
+					</dependency>
+					<dependency>
+					    <groupId>org.codehaus.groovy</groupId>
+					    <artifactId>groovy-templates</artifactId>
+					    <version>2.3.6</version>
+					</dependency>
+					
+			    </dependencies>
+			</plugin>
+
+        <plugin>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <version>1.8</version>
+            <executions>
+                <execution>
+                    <id>default-cli</id>
+                    <phase>generate-resources</phase>
+                    <goals>
+                        <goal>run</goal>
+                    </goals>
+                    <!--<phase>process-resources</phase>-->
+                    <!--<phase>compile</phase>-->
+                    <configuration>
+                        <target>
+                            <concat destfile="${project.build.directory}/site-res/assets/powershell/java-standard.ps1"
+                                    force="yes">
+                                <filelist dir="${project.basedir}/src/main/resources/assets/assets/powershell">
+                                    <file name="install-start.ps1"/>
+                                    <file name="java-standard.ps1"/>"
+                                    <file name="install-end.ps1"/>
+                                </filelist>
+                             </concat>
+
+                        </target>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+
+            <!-- 
+            See: https://maven.apache.org/guides/mini/guide-site.html
+                 http://andriusvelykis.github.io/reflow-maven-skin/
+             -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.3</version>
+				<dependencies>
+					<dependency>
+						<groupId>lt.velykis.maven.skins</groupId>
+						<artifactId>reflow-velocity-tools</artifactId>
+						<version>1.1.1</version>
+					</dependency>
+					<!-- Reflow skin requires Velocity >= 1.7 -->
+					<dependency>
+						<groupId>org.apache.velocity</groupId>
+						<artifactId>velocity</artifactId>
+						<version>1.7</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+
+		</plugins>
+	</build>
+	<name>ARCS WEBSITE</name>
+	<description>Using the installer script.
+It is possible to install the entire developement environment software and set up the environment from a single command.</description>
+	<groupId>Arcs</groupId>
+</project>
