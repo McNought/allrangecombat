@@ -55,7 +55,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="hidden-sm col-md-2">
+				<div class="hidden-xs hidden-sm col-md-2">
 				
 							<div class="panel panel-default">
 								<div class="panel-heading lead">
@@ -174,7 +174,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-xs-6 col-sm-3">
 					<div class="panel panel-default panel-max22">
 						<div class="panel-heading">
 							<h3>Leighton Buzzard<br/><span class="small">(General Training)</span></h3>
@@ -193,7 +193,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3">
+				<div class="col-xs-6 col-sm-3">
 					<div class="panel panel-default panel-max22">
 						<div class="panel-heading">
 							<h3>Leighton Buzzard<br/><span class="small">(Kick-boxing)</span></h3>
@@ -218,7 +218,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3">
+				<div class="col-xs-6 col-sm-3">
 					<div class="panel panel-default panel-max22">
 						<div class="panel-heading">
 							<h3>Leighton Buzzard<br/><span class="small">(Thai Boxing)</span></h3>
@@ -244,7 +244,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3">
+				<div class="col-xs-6 col-sm-3">
 					<div class="panel panel-default panel-max22">
 						<div class="panel-heading">
 							<h3>Bath<br/><span class="small">(General Training)</span></h3>

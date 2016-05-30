@@ -103,15 +103,16 @@ body.post .navbar-brand img
 	}
 }
 
-.navbar .navbar-toggle,
-.navbar-collapse
+.dropdown-menu>li>a,
+div.navbar-collapse.navbar-menubuilder.collapse.in>ul,
+div.navbar-collapse.navbar-menubuilder.collapse.in>ul>li>a,
+#custom-bootstrap-menu > div > div.navbar-collapse.navbar-menubuilder.collapse.in
 {
-	background-color:#9A1A32;
+    color: #333;
+	background:#F7F7F7;
 }
-.navbar-default .navbar-nav .open .dropdown-menu>li>a
-{
-	color:white;
-}
+
+
 
 
 body.post .navbar span.strap,
