@@ -1,5 +1,6 @@
 title=About
-date=2013-09-24
+subtitle=About
+date=2016-02-24
 type=page
 tags=about,martial arts styles
 status=published

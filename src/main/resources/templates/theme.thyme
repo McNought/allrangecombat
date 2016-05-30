@@ -86,12 +86,22 @@
 					<li class="dropdown">
 		                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Content <b class="caret"></b></a>
 		                <ul class="dropdown-menu">
+		                	<li><a href="about/index.html">About</a></li>
+		                	<li><a href="styles/about.html">Styles</a></li>
+		                	<li><a href="syllabuses/index.html">Syllabuses</a></li>
+							<li role="separator" class="divider"></li>
+		                	<li><a href="lb/bideford-green.html">In Leighton Buzzard</a></li>
+		                	<li><a href="bath/index.html">In Bath</a></li>
+		                	<!--
+							<li role="separator" class="divider"></li>
 		                	<li th:each="page : ${published_pages}">
 								<a th:href='${page.uri}' href='href'>
 									<span th:text='${page.title}'>title</span>
 									<em th:if='${page.get("subtitle")!=null}'>(<span th:text='${page.get("subtitle")}'>subtitle</span>)</em>
 								</a>
 							</li>
+							-->
+							<!--
 							<li role="separator" class="divider"></li>
 		                	<li th:each="post : ${published_posts}">
 								<a th:href='${post.uri}' href='href'>
@@ -99,6 +109,7 @@
 									<em th:text='${post.title}'>title</em>
 								</a>
 							</li>
+							-->
 						</ul>
 		            </li>
 		            <!-- End: Dropdown -->

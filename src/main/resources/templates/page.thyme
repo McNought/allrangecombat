@@ -20,7 +20,7 @@
 			</div>
             <!-- end .row -->
 			<div class="row">
-				<div class="hidden-sm col-md-2 col-lg-2">
+				<div class="col-sm-3 col-md-2 col-lg-2">
 		            <div class="list-group table-of-contents">
 		              <a th:each="page : ${published_pages}"
 		                 th:if='${content.title==page.title}'
@@ -34,7 +34,7 @@
 		            </div>
 		         </div>
 		         <!-- end .col -->  
-		         <div class="col-sm-12 col-md-8 col-lg-8">		
+		         <div class="col-sm-9 col-md-8 col-lg-8">		
 		            <div th:utext='${content.body}'>body</div>
 		            <hr/>
 		            <div class="pull-left">
