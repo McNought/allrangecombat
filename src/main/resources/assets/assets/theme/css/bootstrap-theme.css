@@ -94,21 +94,25 @@ body.post .navbar-brand img
 .navbar-brand span.strap
 	{
 	font-size:10pt;
-	Xcolor:lime;
-	
 	}
 }
 @media (max-width: 340px) {
 .navbar-brand span.strap
 	{
-	Xcolor:orange;
 	top:50px;
 	}
 }
-.navbar .navbar-toggle
+
+.navbar .navbar-toggle,
+.navbar-collapse
 {
-z-index: 1100;	
+	background-color:#9A1A32;
 }
+.navbar-default .navbar-nav .open .dropdown-menu>li>a
+{
+	color:white;
+}
+
 
 body.post .navbar span.strap,
 .navbar.smaller span.strap
