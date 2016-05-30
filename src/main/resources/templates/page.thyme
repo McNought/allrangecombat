@@ -10,28 +10,76 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="page-header text-center">
-						<h2 th:text='${content.title}'>h2-title</h2>
-						<h3 th:if='${content.get("subtitle")!=null}'><small th:text='${content.get("subtitle")}'>subtitle</small></h3>
+						<h2>
+							<span th:if='${content.get("subtitle")!=null}'  th:text="${content.get('subtitle')}">h2-title</span>
+							<span th:if='${content.get("subtitle")==null}'  th:text="${content.title}">h2-title</span>
+							<small th:if='${content.get("subtitle")!=null}' th:text="${'('+content.title+')'}">subtitle</small>
+						</h2>
 					</div>
 				</div>
 			</div>
+            <!-- end .row -->
 			<div class="row">
-				<div class="col-lg-12">
-		
+				<div class="hidden-sm col-md-2 col-lg-2">
+		            <div class="list-group table-of-contents">
+		              <a th:each="page : ${published_pages}"
+		                 th:if='${content.title==page.title}'
+		              	 th:href="${page.uri}"
+		                 class="list-group-item" href="#navbar">
+							<span th:if='${page.get("subtitle")==null}' 
+								  th:text='${page.title}'>subtitle</span>
+							<span th:if='${page.get("subtitle")!=null}' 
+								  th:text='${page.get("subtitle")}'>subtitle</span>
+		                 </a>
+		            </div>
+		         </div>
+		         <!-- end .col -->  
+		         <div class="col-sm-12 col-md-8 col-lg-8">		
 		            <div th:utext='${content.body}'>body</div>
 		            <hr/>
-					<p><em th:text='${#dates.format(content.date,"dd MMMM yyyy")}'>date</em></p>
+		            <div class="pull-left">
+				      <p><em th:text='${#dates.format(content.date,"dd MMMM yyyy")}'>date</em></p>
+				    </div>
+				    <div class="pull-right">
+				      <span th:each="tag: ${content.tags}"><code 
+		                    th:text="${tag}">CODE</code></span>
+				    </div>	  
+				</div>				          
+		        <!-- end .col --> 
+				<div class="hidden-sm col-md-2 col-lg-2">
 				
-		            <p>Installs: 
-		              <code th:each="tag: ${content.tags}"
-		                    th:text="${tag}">CODE</code>
-		            </p>
-		            
-		        <!-- end .col -->    
-            	</div>
-            <!-- end .row -->
-            </div>
+					<div class="panel panel-default">
+						<div class="panel-heading lead">
+							Leighton Buzzard
+						</div>
+						<div class="panel-body">
+							<p>
+								<b>Tuesdays</b><br/>8.00-10.00 pm.
+							</p>
+							<p>
+								<b>Thursdays</b><br/>8.00-9.00 pm<br/>
+								<b>Sundays</b><br/>7.30-8.30
+							</p>
+							<p>Text:<br/><b>077-8854-4726</b></p>
+						</div>
+					</div>
+		
+					<div class="panel panel-default">
+						<div class="panel-heading lead">
+							Bath
+						</div>
+						<div class="panel-body">
+							<p>
+								<b>Tuesday</b><br/> 8.00-10.00 pm Bath Sports Centre, Bath.
+							</p>
+							<p>Text:<br/><b>077-1314-7826</b></p>
+						</div>
+					</div>
+				</div>
+				<!-- end .col -->       
+        	</div>
+        <!-- end .row -->
         </div>
-     
+      
     </body>
 </html>

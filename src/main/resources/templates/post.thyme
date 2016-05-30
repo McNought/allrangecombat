@@ -22,7 +22,7 @@
 		            <hr/>
 					<p><em th:text='${#dates.format(content.date,"dd MMMM yyyy")}'>date</em></p>
 				
-		            <p>Installs: 
+		            <p>
 		              <code th:each="tag: ${content.tags}"
 		                    th:text="${tag}">CODE</code>
 		            </p>

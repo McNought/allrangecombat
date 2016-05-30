@@ -249,10 +249,14 @@ body
 }
 
 
-.fg-dkRed,
-a
+.fg-dkRed
 {
  color:#9A1A32;
+}
+a,
+a:hover
+{
+ color:#D60026;
  
 }
 
