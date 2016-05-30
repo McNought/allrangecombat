@@ -11,6 +11,7 @@
 				<div class="col-lg-12">
 					<div class="page-header text-center">
 						<h2 th:text='${content.title}'>h2-title</h2>
+						<h3 th:if='${content.get("subtitle")!=null}'>(<em th:text='${content.get("subtitle")}'>subtitle</em>)</h3>
 					</div>
 				</div>
 			</div>

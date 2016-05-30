@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<base th:href="${content.rootpath}" href="/" />
 	<link rel="icon"          href="assets/theme/favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="assets/theme/favicon.ico" type="image/x-icon"/>
 
@@ -66,6 +67,7 @@
 					<li><a class="scroller" href="index.html#contact">Contact</a></li>
 					
 					<!-- Dropdown -->
+					<!--
 					<li class="dropdown">
 					    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 					    <ul class="dropdown-menu">
@@ -78,13 +80,24 @@
 					      <li><a href="#">One more separated link</a></li>
 					    </ul>
 					</li>
+					-->
 					<!-- End: Dropdown -->
 					<!-- Dropdown: BLOG -->
 					<li class="dropdown">
-		                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Blog-TBC <b class="caret"></b></a>
+		                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Content <b class="caret"></b></a>
 		                <ul class="dropdown-menu">
+		                	<li th:each="page : ${published_pages}">
+								<a th:href='${page.uri}' href='href'>
+									<span th:text='${page.title}'>title</span>
+									<em th:if='${page.get("subtitle")!=null}'>(<span th:text='${page.get("subtitle")}'>subtitle</span>)</em>
+								</a>
+							</li>
+							<li role="separator" class="divider"></li>
 		                	<li th:each="post : ${published_posts}">
-								<a th:href='${post.uri}' href='href' th:text='${post.title}'>title</a>
+								<a th:href='${post.uri}' href='href'>
+									<span th:text='${#dates.format(post.date,"dd MMMM yyyy")}'>date</span>:
+									<em th:text='${post.title}'>title</em>
+								</a>
 							</li>
 						</ul>
 		            </li>
