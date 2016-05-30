@@ -52,11 +52,34 @@
 		  });
 		}
 		
+		/** Click: Navigate or Scroll */
 		$('a.scroller').click(function (event) {
-			  event.preventDefault();
 			  var too = $(this).attr('href');
-			  //alert(too);
-			  $(too).scrollView();
+			  
+			  if ( too.startsWith("#") )
+				  {
+				  // Scroll
+				  event.preventDefault();
+				  $(too).scrollView();
+				  }
+			  else
+				  {
+				  var path = window.location.pathname;
+				  path = path.split('/').pop();
+				  //var n = path.lastIndexOf("/");
+				  //if ( n > -1 ) path = 
+				  console.log( "path:["+ path + "]:[" + too + "]=" + too.startsWith(path) );
+				  if (too.startsWith(path))
+					  {
+					  // Starts with so scroll
+					  // But change the href first
+					  too = "#" + too.split('#').pop();
+					  console.log("scroll->"+too);
+					  event.preventDefault();
+					  $(too).scrollView();
+					  }
+				  }
+			  
 			});
 		
 		//---------------------------------------------------------------------------------------

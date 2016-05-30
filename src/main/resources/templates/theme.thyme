@@ -6,16 +6,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<link rel="icon" href="../../favicon.ico"/>
+	<link rel="icon"          href="assets/theme/favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="assets/theme/favicon.ico" type="image/x-icon"/>
 
-	<title>All Range Combat.com | Classes in Bath &amp; Leighton Buzzard</title>
+	<title>(THEME) All Range Combat.com | Martial Arts Classes in Bath &amp; Leighton Buzzard</title>
 
 	<meta name="description" content="Freestyle Martial Arts: A.R.C.S. a combination of Tae Kwon Do, Kali, Jun-Fan Kung foo. Classes in Bath &amp; Leighton Buzzard." />
 	<meta name="author" content="https://www.blogger.com/profile/05396145029470077764"/>
 	<meta property="og:title" content="All Range Combat.com" />
 	<meta property="og:description" content="Freestyle Martial Arts: A.R.C.S. a combination Tae Kwon Do, Kali, Jun-Fan Knung foo. Classes in Bath &amp; Leighton Buzzard. Drop in and visit - first lesson is free!" />
 	<meta property="og:url" content="http://allrangecombat.com/" />
-	<meta property="og:image" content="http://allrangecombat.com/assets/site/img/ARCS-Badge.png" />
+	<meta property="og:image" content="http://allrangecombat.com/assets/theme/img/ARCS-Badge.png" />
 	<meta property="og:locale" content="en_GB" />
 	<meta property="og:type" content="article"/>
 	
@@ -26,7 +27,7 @@
 	<link href="assets/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
 
 	<!-- Custom styles for this template -->
-	<link href="assets/site/css/bootstrap-theme.css" rel="stylesheet"/>
+	<link href="assets/theme/css/bootstrap-theme.css" rel="stylesheet"/>
 	<link href="assets/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
 	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -42,13 +43,12 @@
 
 <body>
 
-	<!-- http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/## -->
 	<div id="custom-bootstrap-menu"
 		class="navbar navbar-default navbar-fixed-top bg-dkRed" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#"> <img alt="All Range Combat"
-					src="assets/site/img/ARCS-Badge.png" /> <span class="strap">More
+					src="assets/theme/img/ARCS-Badge.png" /> <span class="strap">More
 						than just kick boxing!</span>
 				</a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -60,10 +60,10 @@
 			</div>
 			<div class="collapse navbar-collapse navbar-menubuilder">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a class="scroller" href="#top">Home</a></li>
-					<li><a class="scroller" href="#about">About</a></li>
-					<li><a class="scroller"  href="#classes">Classes</a></li>
-					<li><a class="scroller" href="#contact">Contact</a></li>
+					<li><a class="scroller" href="index.html#top">Home</a></li>
+					<li><a class="scroller" href="index.html#about">About</a></li>
+					<li><a class="scroller"  href="index.html#classes">Classes</a></li>
+					<li><a class="scroller" href="index.html#contact">Contact</a></li>
 					
 					<!-- Dropdown -->
 					<li class="dropdown">
@@ -98,164 +98,11 @@
 
 	
 	<div class="anchor"><a id="top"></a></div>
-    <div class="container">
-
-      <div class="page-header" id="banner">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>Project: <b>OBSIDIAN WEAPON</b></h1>          
-            <h2>A Downloadable Development Environment for IPL</h2> 
-            <p class="lead">An easy way to set up developement environments for projects.<br/>Easy and modern (sets up tools for a VM).</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-2 col-md-4">
-            <div class="list-group table-of-contents">
-              <a th:each="content: ${published_content}"
-                 th:text="${content.title}"
-                 th:href="${config.site_host+'/'+content.uri}"
-                 class="list-group-item" href="standard-java.html">Standard Java development</a>
-            </div>
-          </div>
-          <div class="col-lg-10 col-md-8">
-            <div th:replace="this ::body">
-                 <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-            </div>
-
-          </div>
-<!--            <div class="col-lg-4 col-md-2"> -->
-<!--             <div class="bs-component"> -->
-<!--              <h2>Quam iaculis</h2> -->
-<!--               <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p> -->
-<!--               <p><small>This line of text is meant to be treated as fine print.</small></p> -->
-<!--               <p>The following snippet of text is <strong>rendered as bold text</strong>.</p> -->
-<!--               <p>The following snippet of text is <em>rendered as italicized text</em>.</p> -->
-<!--               <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p> -->
-<!--               <h2>Emphasis classes</h2> -->
-<!--               <p class="text-muted">text-muted: Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p> -->
-<!--               <p class="text-primary">text-primary: Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
-<!--               <p class="text-warning">text-warning: Etiam porta sem malesuada magna mollis euismod.</p> -->
-<!--               <p class="text-danger">text-danger: Donec ullamcorper nulla non metus auctor fringilla.</p> -->
-<!--               <p class="text-success">text-success: Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p> -->
-<!--               <p class="text-info">text-info: Maecenas sed diam eget risus varius blandit sit amet non magna.</p> -->
-<!--             </div> -->
-
-<!--           </div> -->
-        </div>
-		
-      </div>
- </div>
+    <div id="page-content" th:replace="this ::body">
+         <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+    </div>
+            
  
-	<!-- ABOUT
-      ================================================== -->
-	<div class="anchor"><a id="about"></a></div>
-	<div id="aboutPage" class="container full-page">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="page-header text-center">
-					<h2>The All Range Combat clubs teach a true multi-style martial arts system,
-						which continuously evolves and incorporates new techniques and
-						strategies into solid, tried and trusted martial arts.</h2>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="hidden-sm col-md-2">
-			
-						<div class="panel panel-default">
-							<div class="panel-heading lead">
-								Leighton Buzzard
-							</div>
-							<div class="panel-body">
-								<p>
-									<b>Tuesdays</b><br/>8.00-10.00 pm.
-								</p>
-								<p>
-									<b>Thursdays</b><br/>8.00-9.00 pm<br/>
-									<b>Sundays</b><br/>7.30-8.30
-								</p>
-								<p>Text:<br/><b>077-8854-4726</b></p>
-							</div>
-						</div>
-			
-						<div class="panel panel-default">
-							<div class="panel-heading lead">
-								Bath
-							</div>
-							<div class="panel-body">
-								<p>
-									<b>Tuesday</b><br/> 8.00-10.00 pm Bath Sports Centre, Bath.
-								</p>
-								<p>Text:<br/><b>077-1314-7826</b></p>
-							</div>
-						</div>
-			</div>
-			<div class="col-sm-12 col-md-10">
-		        <div class="row">
-			
-					<div class="col-sm-6">
-						<p>Over 30 years of existence it has produced more than 40 high
-							quality black belts, proficient in their chosen areas- and
-							continues to do so. Chief Instructor Colin Lawrence has trained
-							since 1975 and has been taught and graded by the first generation
-							instructors in this country and the USA, and has reached the
-							highest levels in TaeKwonDo, Thai Boxing, Kickboxing, Kali, Boxing,
-							Jiu Jitsu and Jeet Kune Do. Other martial arts are also
-							incorporated. The club has been running for 30 years.</p>
-						<p>Core training emphasises health, fitness, self-defence and a
-							high level of ability in each art. Safety is a priority. Beginners
-							are all welcome and are assisted by the higher grades. It is a
-							friendly and supportive environment.</p>
-					</div>
-					<div class="col-sm-6">
-						<p>Students can grade as high as 3rd Dan Black Belt in
-							Taekwondo, Kickboxing or Mixed arts. This core training brings the
-							power of Thai Boxing, the grace and fluid kicking of Korean
-							Taekwondo, the devastatingly effective art of western boxing , the
-							complex and fascinating weaponary and open-hand defence of
-							Phillipino Kali, the stunning efficiency of Bruce Lee's JKD, and
-							the vastly numerous locks , holds and ground-fighting techniques of
-							Jiu Jitsu (Japanese and Brazilian)....and much more besides!
-							Flexibility and fitness feature strongly.</p>
-						<p>Students are welcome from the age of 12 until any age
-							whatsoever. The age restriction is because of size. Men and women
-							of course. beginners and seasoned veterans. We have absolute
-							beginners through to people training 30 yrs plus.</p>
-					</div>
-					
-				</div>
-				
-				<div class="row">
-					<div class="col-md-12  text-center">
-						<br/>
-						<p>Students can concentrate on certain areas if they desire-
-							there is simply so much to learn!</p>
-						<p class="lead">If you are looking for real self-defence,
-							technically pure martial arts techniques from multiple styles, grading
-							to all levels in different arts, the opportunity for safe but real
-							combat sparring, a relaxed but disciplined environment, with a big
-							emphasis on health and fitness, look no further.</p>
-					</div>
-				</div>
-		
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<a href="#classes" class="scroller btn btn-dark btn-lg">Find Out More <i
-							class="fa fa-level-down"></i></a>
-					</div>
-				</div>
-						
-			</div>
-		</div>
-
-		<a class="scroller" href="#top">Back to Top <i class="fa fa-level-up"></i></a>
-
-
-	</div>
-	<!-- /.container -->
-
-
-
 
 	<!-- Footer
       ================================================== -->
@@ -337,35 +184,35 @@
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="assets/bootstrap-3.3.6/js/vendor/jquery.min.js"></script>
+	<!-- <script src="assets/bootstrap-3.3.6/js/vendor/jquery.min.js"></script> -->
 	<script src="assets/bootstrap-3.3.6/js/bootstrap.min.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="assets/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
-	<script type="text/javascript" src="assets/site/js/bootstrap/window_scroll.js"></script>
-    <script type="text/javascript">
-    
-    $( document ).ready(function() {
-        console.log( "ready @ " + location.protocol + ":" + serverURI );
-        
-        $( "a" ).each(function( index ) {
-        	
-            var href = $( this ).attr('href') ;
-            console.log( index + ": PRE  " + $( this ).text() + "=" + href );
-            if ( location.protocol == "http" )
-        		{
-                href = href.replace(/^~/,serverURI);
-        		}
-            else
-            	{
-            	href = href.replace(/^~/,"");
-            	}
-            this.href = href ;
-            console.log( index + ": POST " + $( this ).text() + "=" + href );
-
-        	});
-        
-    });
-    
-    </script>
+	<script type="text/javascript" src="assets/theme/js/bootstrap/window_scroll.js"></script>
+    <script type="text/javascript"> 
+     
+    $( document ).ready(function() { 
+        //console.log( "ready @ " + location.protocol + ":" + serverURI ); 
+         
+        $( "a" ).each(function( index ) { 
+           
+            var href = $( this ).attr('href') ; 
+            console.log( index + ": PRE  " + $( this ).text() + "=" + href ); 
+            if ( location.protocol == "http" ) 
+            { 
+                href = href.replace(/^~/,serverURI); 
+            } 
+            else 
+              { 
+              href = href.replace(/^~/,""); 
+              } 
+            this.href = href ; 
+            console.log( index + ": POST " + $( this ).text() + "=" + href ); 
+ 
+          }); 
+         
+    }); 
+     
+    </script> 
 </body>
 </html>

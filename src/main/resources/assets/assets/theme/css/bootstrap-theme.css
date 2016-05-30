@@ -33,6 +33,7 @@ body {
 	height:100px;
 }
 
+body.post .navbar ,
 .navbar.smaller
 {
 	height:20px;
@@ -59,7 +60,10 @@ body {
 	padding-top: 0px;
 	margin-top: -20px;
 }
-
+body.post .navbar-brand img
+{
+	width: 20%;
+}
 
 .strap
 {
@@ -106,6 +110,7 @@ body {
 z-index: 1100;	
 }
 
+body.post .navbar span.strap,
 .navbar.smaller span.strap
 {
 	left:25%;

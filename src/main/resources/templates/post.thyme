@@ -5,41 +5,55 @@
     <head>
     <title th:text='${content.title}'>head-title</title>
     </head>
-	<body>
-	
-			<h2 th:text='${content.title}'>h2-title</h2>
+	<body class="post">
+		<div class="container full-page">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="page-header text-center">
+						<h2 th:text='${content.title}'>h2-title</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
 		
-			<p><em th:text='${#dates.format(content.date,"dd MMMM yyyy")}'>date</em></p>
-		
-            <p>Installs: 
-              <code th:each="tag: ${content.tags}"
-                    th:text="${tag}">CODE</code>
-            </p>
-            <hr/>
-            <div th:utext='${content.body}'>body</div>
-            
-            <!-- 
-            INSTALL SCRIPT
-            ==================================================================================== -->
-            <div th:if='${content.get("install-uri")!=null}'>
-	            <h3>Installation</h3>
-	            <p>Install-uri:<code id="install-uri" th:text='${content.get("install-uri")}'>body</code></p>         
-	            <p>Simply paste the following into a command prompt:</p>
-	            <div class="well bs-component">
-	                <code>@powershell -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadString('http://<script type="text/javascript">
-                    var installUri = document.getElementById("install-uri").textContent;
-                    if ( !installUri.startsWith("/") ) installUri = "/" + installUri ;
-	                var uri = serverURI + installUri ;
-	                document.write(uri)
-	                </script>')) | iex"</code>
-	            </div>
-	            <p>Or from within powershell:</p>
-	            <div class="well bs-component">
-	                <code>((new-object net.webclient).DownloadString('http://<script type="text/javascript">
-	                document.write(uri);
-	                </script>')) | iex</code>
-	            </div>            
+		            <div th:utext='${content.body}'>body</div>
+		            <hr/>
+					<p><em th:text='${#dates.format(content.date,"dd MMMM yyyy")}'>date</em></p>
+				
+		            <p>Installs: 
+		              <code th:each="tag: ${content.tags}"
+		                    th:text="${tag}">CODE</code>
+		            </p>
+		            
+		            <!-- 
+		            INSTALL SCRIPT
+		            ==================================================================================== -->
+		            <div th:if='${content.get("install-uri")!=null}'>
+			            <h3>Installation</h3>
+			            <p>Install-uri:<code id="install-uri" th:text='${content.get("install-uri")}'>body</code></p>         
+			            <p>Simply paste the following into a command prompt:</p>
+			            <div class="well bs-component">
+			                <code>@powershell -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadString('http://<script type="text/javascript">
+		                    var installUri = document.getElementById("install-uri").textContent;
+		                    if ( !installUri.startsWith("/") ) installUri = "/" + installUri ;
+			                var uri = serverURI + installUri ;
+			                document.write(uri)
+			                </script>')) | iex"</code>
+			            </div>
+			            <p>Or from within powershell:</p>
+			            <div class="well bs-component">
+			                <code>((new-object net.webclient).DownloadString('http://<script type="text/javascript">
+			                document.write(uri);
+			                </script>')) | iex</code>
+			            </div>            
+		            </div>
+		            
+		        <!-- end .col -->    
+            	</div>
+            <!-- end .row -->
             </div>
-            
+        </div>
+     
     </body>
 </html>

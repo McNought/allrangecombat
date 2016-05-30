@@ -6,11 +6,13 @@
     <title th:text='${content.title}'>head-title</title>
     </head>
 	<body>
+	PAGE.THEME
 	
             <div th:utext='${content.body}'>body</div>
             <hr/>
             <h4 th:text='${content.title}'>h2-title</h4>
             <p><em th:text='${#dates.format(content.date,"dd MMMM yyyy")}'>date</em></p>
-            
+     
+     PAGE.THEME       
     </body>
 </html>

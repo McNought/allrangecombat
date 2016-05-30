@@ -1,73 +1,455 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org" th:replace="theme.thyme::html">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
-<title>Introduction</title>
-<style type="text/css">
-body{
-color:white;
-background:black;
-}
-</style>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<link rel="icon"          href="assets/theme/favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="assets/theme/favicon.ico" type="image/x-icon"/>
+
+	<title>All Range Combat.com | Martial Arts Classes in Bath &amp; Leighton Buzzard</title>
+
+	<meta name="description" content="Freestyle Martial Arts: A.R.C.S. a combination of Tae Kwon Do, Kali, Jun-Fan Kung foo. Classes in Bath &amp; Leighton Buzzard." />
+	<meta name="author" content="https://www.blogger.com/profile/05396145029470077764"/>
+	<meta property="og:title" content="All Range Combat.com" />
+	<meta property="og:description" content="Freestyle Martial Arts: A.R.C.S. a combination Tae Kwon Do, Kali, Jun-Fan Knung foo. Classes in Bath &amp; Leighton Buzzard. Drop in and visit - first lesson is free!" />
+	<meta property="og:url" content="http://allrangecombat.com/" />
+	<meta property="og:image" content="http://allrangecombat.com/assets/theme/img/ARCS-Badge.png" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="article"/>
+	
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+	
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link href="assets/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+	<!-- Custom styles for this template -->
+	<link href="assets/theme/css/bootstrap-theme.css" rel="stylesheet"/>
+	<link href="assets/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	<script src="assets/bootstrap-3.3.6/js/ie-emulation-modes-warning.js"></script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
+
 <body>
-	<h2>Introduction</h2>
-    <p>
-        Essentially all that this does is to allow a developer to gather
-        all the tools for a development environment and install them onto
-        a Windows machine in a simple and quick manner.<br/>
-        For a technical lead it allows a way to control the development set for
-        their developers and to know that it was initially installed from
-        a standard pattern. A pattern that can be version controlled.<br/>
-        The concept is similar to the idea of a <a
-            href="http://martinfowler.com/bliki/PhoenixServer.html">Pheonix
-            Server</a>, which is a server that can be destroyed and recreated
-        reliably and at will. &nbsp;This contrasts with the usual <a
-            href="http://martinfowler.com/bliki/SnowflakeServer.html">Snowflake
-            Server</a> which is where each set up is unique and can not be
-        reproduced.
-    </p>
-	<p>The intention is to make it possible to install the entire development environment
-		software and set up the environment from a single command.<br/>
-    This should allow developers &amp; Tech-leads to ensure all their developers are using the same
-    versions of tools and to control the set up from a their GIT repository location.  </p>
-    <h2>How?</h2>
-    <p>The technology that drives <b>OBSIDIAN</b> is based on Powershell scripts and their ability to load them from a central webserver.</p>
-    <p>It is possible to send a script to PowerShell from a webserver and use that script to run commands on the PC.<br/>This is what <b>OBSIDIAN</b> does.</p>
-    
-    <h2>What does the installer script do?</h2>
-    <p>Each of the installation types all have a url associated with them that simply needs to be posted into a 
-    windows command window. This will download the Powershell script for execution.</p>
-    <p>The download follows these steps:</p>
-    <ol>
-        <li>Ask for clean installation confirmation, which if selected will DELETE all the installed tools before continuing.
-            It is possible if only one tool needs updating to simply delete its folder.
-        </li>
-        <li>All the required modules are downloaded as ZIP files and exploded into the correct install folder;</li>
-        <li>Selected installation packages are executed if newly downloaded;</li>
-        <li>Shortcuts are added to the developer's desktop.</li>
-    </ol>
 
-    <h2>But why &nbsp;<b>OBSIDIAN WEAPON</b>?</h2>
-    <p>Simply because the original Powershell scripts came form a project that had a code name. So a new code name was needed to replace all the instances in the script. So a website called <a href="#">http://projectcodename.com/</a>&nbsp;was used to geneate a "cool name".</p>    
-    
-    
-    
-    
-	<h2>Blog-TBC</h2>
-
-	<div th:each="post : ${published_posts}">
-		<a th:href='${post.uri}' href='href'><h3 th:text='${post.title}'>title</h3></a>
-		<p th:text='${#dates.format(post.date,"dd MMMM yyyy")}'>date</p>
-		<p th:utext='${post.body}'>body</p>
+	<!-- http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/## -->
+	<div id="custom-bootstrap-menu"
+		class="navbar navbar-default navbar-fixed-top bg-dkRed" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"> <img alt="All Range Combat"
+					src="assets/theme/img/ARCS-Badge.png" /> <span class="strap">More
+						than just kick boxing!</span>
+				</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-menubuilder">
+					<span class="sr-only">Toggle navigation</span><span
+						class="icon-bar"></span><span class="icon-bar"></span><span
+						class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navbar-menubuilder">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a class="scroller" href="#top">Home</a></li>
+					<li><a class="scroller" href="#about">About</a></li>
+					<li><a class="scroller"  href="#classes">Classes</a></li>
+					<li><a class="scroller" href="#contact">Contact</a></li>
+					
+					<!-- Dropdown -->
+					<li class="dropdown">
+					    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+					    <ul class="dropdown-menu">
+					      <li><a href="#">Action</a></li>
+					      <li><a href="#">Another action</a></li>
+					      <li><a href="#">Something else here</a></li>
+					      <li role="separator" class="divider"></li>
+					      <li class="dropdown-header">Nav header</li>
+					      <li><a href="#">Separated link</a></li>
+					      <li><a href="#">One more separated link</a></li>
+					    </ul>
+					</li>
+					<!-- End: Dropdown -->
+					<!-- Dropdown: BLOG -->
+					<li class="dropdown">
+		                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Blog-TBC <b class="caret"></b></a>
+		                <ul class="dropdown-menu">
+		                	<li th:each="post : ${published_posts}">
+								<a th:href='${post.uri}' href='href' th:text='${post.title}'>title</a>
+							</li>
+						</ul>
+		            </li>
+		            <!-- End: Dropdown -->
+				</ul>
+			</div>
+		</div>
 	</div>
+	<!-- /.menu -->
+	
 
-	<hr />
+	
+	<div class="anchor"><a id="top"></a></div>
+	<div id="firstPage" class="banner">
+		<div class="container firstPage full-page banner-page fg-dark">
 
-	<p>
-		Older posts are available in the <a
-			th:href='${content.rootpath+config.archive_file}' href='href'>archive</a>.
-	</p>
+				<div class="row">
+					<div class="col-md-5 text-center">
+					</div>
+					<div class="col-md-7 text-left">
+						<br/><br/><br/><br/>
+						<div class="well lead bg-white">
+							<h1 class="strap fg-dkRed">All Range Combat<br/>
+							<span class="small">More than just kick boxing!</span></h1>
+							<h2>FUN,<br/>
+							FITNESS<br/>
+							<i>and</i> SELF-DEFENCE.</h2>
+							<span class="fg-dkRed">Come and learn a mix of martial arts in a safe, friendly and informal environment.<br/>
+							We teach a variety of different martial arts disciplines.<br/>
+							Allowing beginners to progress together in a semi-contact sparing style.</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5">
+					</div>
+					<div class="col-md-7 text-center">
+						<a href="#aboutPage" class="scroller btn btn-dark btn-lg">Find Out More <i
+							class="fa fa-level-down"></i></a>
+					</div>
+				</div>
+
+		</div>
+	</div>
+	<!-- /.container -->
+
+
+	<!-- ABOUT
+      ================================================== -->
+	<div class="anchor"><a id="about"></a></div>
+	<div id="aboutPage" class="container full-page">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="page-header text-center">
+					<h2>The All Range Combat clubs teach a true multi-style martial arts system,
+						which continuously evolves and incorporates new techniques and
+						strategies into solid, tried and trusted martial arts.</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="hidden-sm col-md-2">
+			
+						<div class="panel panel-default">
+							<div class="panel-heading lead">
+								Leighton Buzzard
+							</div>
+							<div class="panel-body">
+								<p>
+									<b>Tuesdays</b><br/>8.00-10.00 pm.
+								</p>
+								<p>
+									<b>Thursdays</b><br/>8.00-9.00 pm<br/>
+									<b>Sundays</b><br/>7.30-8.30
+								</p>
+								<p>Text:<br/><b>077-8854-4726</b></p>
+							</div>
+						</div>
+			
+						<div class="panel panel-default">
+							<div class="panel-heading lead">
+								Bath
+							</div>
+							<div class="panel-body">
+								<p>
+									<b>Tuesday</b><br/> 8.00-10.00 pm Bath Sports Centre, Bath.
+								</p>
+								<p>Text:<br/><b>077-1314-7826</b></p>
+							</div>
+						</div>
+			</div>
+			<div class="col-sm-12 col-md-10">
+		        <div class="row">
+			
+					<div class="col-sm-6">
+						<p>Over 30 years of existence it has produced more than 40 high
+							quality black belts, proficient in their chosen areas- and
+							continues to do so. Chief Instructor Colin Lawrence has trained
+							since 1975 and has been taught and graded by the first generation
+							instructors in this country and the USA, and has reached the
+							highest levels in TaeKwonDo, Thai Boxing, Kickboxing, Kali, Boxing,
+							Jiu Jitsu and Jeet Kune Do. Other martial arts are also
+							incorporated. The club has been running for 30 years.</p>
+						<p>Core training emphasises health, fitness, self-defence and a
+							high level of ability in each art. Safety is a priority. Beginners
+							are all welcome and are assisted by the higher grades. It is a
+							friendly and supportive environment.</p>
+					</div>
+					<div class="col-sm-6">
+						<p>Students can grade as high as 3rd Dan Black Belt in
+							Taekwondo, Kickboxing or Mixed arts. This core training brings the
+							power of Thai Boxing, the grace and fluid kicking of Korean
+							Taekwondo, the devastatingly effective art of western boxing , the
+							complex and fascinating weaponary and open-hand defence of
+							Phillipino Kali, the stunning efficiency of Bruce Lee's JKD, and
+							the vastly numerous locks , holds and ground-fighting techniques of
+							Jiu Jitsu (Japanese and Brazilian)....and much more besides!
+							Flexibility and fitness feature strongly.</p>
+						<p>Students are welcome from the age of 12 until any age
+							whatsoever. The age restriction is because of size. Men and women
+							of course. beginners and seasoned veterans. We have absolute
+							beginners through to people training 30 yrs plus.</p>
+					</div>
+					
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12  text-center">
+						<br/>
+						<p>Students can concentrate on certain areas if they desire-
+							there is simply so much to learn!</p>
+						<p class="lead">If you are looking for real self-defence,
+							technically pure martial arts techniques from multiple styles, grading
+							to all levels in different arts, the opportunity for safe but real
+							combat sparring, a relaxed but disciplined environment, with a big
+							emphasis on health and fitness, look no further.</p>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<a href="#classes" class="scroller btn btn-dark btn-lg">Find Out More <i
+							class="fa fa-level-down"></i></a>
+					</div>
+				</div>
+						
+			</div>
+		</div>
+
+		<a class="scroller" href="#top">Back to Top <i class="fa fa-level-up"></i></a>
+
+
+	</div>
+	<!-- /.container -->
+
+	<!-- CLASSES
+      ================================================== -->
+	<div class="anchor"><a id="classes"></a></div>
+	<div class="container full-page">
+		<div class="row text-center">
+			<div class="col-lg-10 col-lg-offset-1">
+				<h2>Our classes</h2>
+				<hr class="small"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<p>
+					Classes in <b>Leighton Buzzard</b> are taught by Chief Instructor
+					Colin Lawrence who has trained since 1975 and has been taught and
+					graded by the first generation instructors in this country and the
+					USA.
+				</p>
+				<p>
+					The affiliated club in <b>Bath</b> is run by long-term student and
+					very experienced Black Belt Bruce Mundin.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="panel panel-default panel-max22">
+					<div class="panel-heading">
+						<h3>Leighton Buzzard</h3>
+						<h4>Tuesdays</h4>
+					</div>
+					<div class="panel-body">
+						<p>8.00-10.00 pm.</p>
+						<p>Bideford Green Community Centre, Linslade, Leighton Buzzard</p>
+					</div>
+					<div class="panel-foot">
+						<a href="lb/contactLB1.html"> <span class="fa-stack fa-2x"> <i
+								class="fa fa-circle fa-stack-2x"></i> <i
+								class="fa fa-map-marker fa-stack-1x second"></i>
+						</span> See on Map <i class="fa fa-level-down"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="panel panel-default panel-max22">
+					<div class="panel-heading">
+						<h3>Leighton Buzzard</h3>
+						<h4>
+							Thursdays<br/>(Kick-boxing)
+						</h4>
+					</div>
+					<div class="panel-body">
+						<p>8.00-9.00 pm.</p>
+						<p>
+							MMA gym in town (<a href="http://www.elitetcmma.co.uk/"
+								target="_null">Elite TC</a>), Elite Training Centre, 17b North
+							street, Leighton Buzzard LU7 1EU
+						</p>
+					</div>
+					<div class="panel-foot">
+						<a href="lb/contactLB2.html"> <span class="fa-stack fa-2x"> <i
+								class="fa fa-circle fa-stack-2x"></i> <i
+								class="fa fa-map-marker fa-stack-1x second"></i>
+						</span> See on Map <i class="fa fa-level-down"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="panel panel-default panel-max22">
+					<div class="panel-heading">
+						<h3>Leighton Buzzard</h3>
+						<h4>
+							Sundays<br/>(Thai Boxing)
+						</h4>
+					</div>
+					<div class="panel-body">
+						<p>7.30-8.30 pm.</p>
+						<p>
+							MMA gym in town (<a href="http://www.elitetcmma.co.uk/"
+								target="_null">Elite TC</a>), Elite Training Centre, 17b North
+							street, Leighton Buzzard LU7 1EU
+						</p>
+					</div>
+					<div class="panel-foot">
+						<a href="/lb/contactLB2.html"> <span class="fa-stack fa-2x"> <i
+								class="fa fa-circle fa-stack-2x"></i> <i
+								class="fa fa-map-marker fa-stack-1x second"></i>
+						</span> See on Map <i class="fa fa-level-down"></i>
+						</a>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="panel panel-default panel-max22">
+					<div class="panel-heading">
+						<h3>Bath</h3>
+						<h4>Tuesdays</h4>
+					</div>
+					<div class="panel-body">
+						<p>8.00-10.00 pm</p>
+						<p>Upper Sports Hall, Bath Sports Centre, Bath.</p>
+						<h4>
+							Text: <b>07713147826</b>
+						</h4>
+					</div>
+					<div class="panel-foot">
+						<a class="scroller" href="#contactBath"> <span class="fa-stack fa-2x"> <i
+								class="fa fa-circle fa-stack-2x"></i> <i
+								class="fa fa-map-marker fa-stack-1x second"></i>
+						</span> See on Map <i class="fa fa-level-down"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a class="scroller" href="#top">Back to Top <i class="fa fa-level-up"></i></a>
+
+	</div>
+	<!-- /.container -->
+
+
+	<!-- Footer
+      ================================================== -->
+	<div class="anchor"><a id="contact"></a></div>
+	<div class="container full-page">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="strap">All Range Combat</h2>
+				<h5 class="strap">More than just kickboxing!</h5>
+				<hr/>
+				<h4>
+					<strong>Colin Lawrence</strong>
+				</h4>
+				<ul class="list-unstyled">
+					<li><i class="fa fa-phone fa-fw"></i> 077-8854-4726</li>
+					<li><i class="fa fa-envelope-o fa-fw"></i> <a
+						href="mailto:Allrangecombat@gmail.com">Allrangecombat@gmail.com</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<p class="text-muted">Copyright &copy; All Range Combat 2016</p>
+			</div>
+			<div class="col-md-6">
+				<p class="pull-right"><a class="scroller" href="#top">Back to Top <i
+							class="fa fa-level-up"></i></a></p>
+			</div>
+		</div>
+		<div class="row text-muted">
+			<div class="col-lg-12" style="font-size: 75%">
+	
+	
+				<p>
+					Site By <a href="https://www.blogger.com/profile/05396145029470077764" >Bruce
+						Mundin</a>. Contact him at <a
+						href="/cdn-cgi/l/email-protection#0b7f6364666a784b6964647f787c6a7f686325686466"><span
+						class="__cf_email__"
+						data-cfemail="05716d6a68647645676a6a7176726471666d2b666a68">[email&#160;protected]</span>.</a>
+				</p>
+				<p>
+					Code released under the <a
+						href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT
+						License</a>.
+				</p>
+				<p>
+					Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>.
+					Icons from <a href="http://fortawesome.github.io/Font-Awesome/"
+						rel="nofollow">Font Awesome</a>. Web fonts from <a
+						href="http://www.google.com/webfonts" rel="nofollow">Google</a>.
+				</p>
+	
+				<p>
+					<a href="typography.html">Typography</a>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<br/>
+				<ul class="list-inline">
+					<li><a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+					</li>
+					<li><a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a></li>
+					<li><a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>		
+	</div>
+	<!-- /.container -->
+
+
+
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="assets/bootstrap-3.3.6/js/vendor/jquery.min.js"></script>
+	<script src="assets/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="assets/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+	<script type="text/javascript" src="assets/theme/js/bootstrap/window_scroll.js"></script>
 </body>
 </html>
