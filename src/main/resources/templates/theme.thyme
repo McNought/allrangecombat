@@ -62,10 +62,69 @@
 			<div class="collapse navbar-collapse navbar-menubuilder">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a class="scroller" href="index.html#top">Home</a></li>
-					<li><a class="scroller" href="index.html#about">About</a></li>
-					<li><a class="scroller"  href="index.html#classes">Classes</a></li>
-					<li><a class="scroller" href="index.html#contact">Contact</a></li>
 					
+					
+					
+					<li class="dropdown">
+					    <a href="#" class="dropdown-toggle" 
+					    			data-toggle="dropdown" 
+					    			role="button" 
+					    			aria-haspopup="true" 
+					    			aria-expanded="false">About the classes <span class="caret"></span></a>
+					    <ul class="dropdown-menu">
+						    <li><a class="scroller" href="index.html#about">Overview</a></li>
+						    <li role="separator" class="divider"></li>
+					    	<li><a class="scroller" href="index.html#contact">Contact</a></li>
+
+		                	<li><a href="about/index.html">About</a></li>
+					    </ul>
+					</li>
+					
+					
+					<li class="dropdown">
+					    <a href="#" class="dropdown-toggle" 
+					    			data-toggle="dropdown" 
+					    			role="button" 
+					    			aria-haspopup="true" 
+					    			aria-expanded="false">Where are we? <span class="caret"></span></a>
+					    <ul class="dropdown-menu">
+					      <li><a class="scroller" href="index.html#classes">All Our Classes</a></li>
+					      <li role="separator" class="divider"></li>
+		                	<li><a href="lb/bideford-green.html">In Leighton Buzzard</a></li>
+		                	<li><a href="bath/index.html">In Bath</a></li>
+					    </ul>
+					</li>
+					<li class="dropdown">
+					    <a href="#" class="dropdown-toggle" 
+					    			data-toggle="dropdown" 
+					    			role="button" 
+					    			aria-haspopup="true" 
+					    			aria-expanded="false">What we Teach <span class="caret"></span></a>
+					    <ul class="dropdown-menu">
+					    	<li><a href="styles/about.html">Our Styles</a></li>
+		                	<li><a href="syllabuses/index.html">Grading Levels</a></li>
+					    </ul>
+					</li>
+					<li class="dropdown">
+					    <a href="#" class="dropdown-toggle" 
+					    			data-toggle="dropdown" 
+					    			role="button" 
+					    			aria-haspopup="true" 
+					    			aria-expanded="false">Blog <span class="caret"></span></a>
+					    <ul class="dropdown-menu">
+		                	<li th:each="post : ${published_posts}">
+								<a th:href='${post.uri}' href='href'>
+									<span th:text='${#dates.format(post.date,"dd MMMM yyyy")}'>date</span>:
+									<em th:text='${post.title}'>title</em>
+								</a>
+							</li>
+						</ul>
+					</li>					
+						
+					
+					
+	
+												
 					<!-- Dropdown -->
 					<!--
 					<li class="dropdown">
@@ -83,7 +142,7 @@
 					-->
 					<!-- End: Dropdown -->
 					<!-- Dropdown: BLOG -->
-					<li class="dropdown">
+					<li class="hide dropdown">
 		                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Content <b class="caret"></b></a>
 		                <ul class="dropdown-menu">
 		                	<li><a href="about/index.html">About</a></li>
